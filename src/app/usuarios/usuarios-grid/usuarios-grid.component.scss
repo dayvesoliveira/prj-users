@@ -1,0 +1,64 @@
+.avatar {
+
+    &--cell {
+        padding-left: 10px !important;
+        width: 5%;
+    }
+    .avatar__container {
+        padding-right: 10px;
+        &--img {
+            width: 2rem;
+            height: 2rem;
+            border: 1px solid transparent;
+            border-radius: 100%;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+.panel-datatable-material {
+    margin: 15px auto;
+    width: 100%;
+    & .datatable-material {
+        width: 100%;
+    }
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@for $i from 5 through 35 {
+    .cell-#{$i}{
+        font-size: .71em;
+        width: #{$i * 1%}
+    }
+}
+
+@media (min-width: 576px) {
+    @for $i from 5 through 35 {
+        .cell-#{$i}{
+            font-size: .9rem;
+        }
+    }   
+}
+
+@media screen and (min-width: 40em) {
+    .panel-datatable-material {
+        max-width: 50%;
+    }
+}
+
+.silver {
+    color: #9195ab;
+    font-size: 1.4em;
+}

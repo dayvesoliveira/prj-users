@@ -1,0 +1,41 @@
+ 
+  .mat-toolbar {
+    &.mat-primary-users {
+      position: fixed;
+      background: #094382;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
+  }
+  
+  .container {
+    margin: 15% auto;
+    padding: 5px;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  @media (min-width: 576px) {
+      .container {
+        max-width: calc(100% - 10px);
+      }
+      td.mat-cell:first-of-type, 
+      td.mat-footer-cell:first-of-type, 
+      th.mat-header-cell:first-of-type {
+        padding-left: 24px;
+      }
+  }
+    
+  @media (min-width: 768px) {
+      .container {
+        margin: 7% 15px;
+        max-width: calc(100% - 10px);
+      }
+  }
+
+  #h_brand {
+      margin-left: 1em;
+      margin-right: 6em;
+  }

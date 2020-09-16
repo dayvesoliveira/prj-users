@@ -1,0 +1,52 @@
+<main class="detail">
+    <div class="detail__header">
+        <header class="detail__header--topcolor">
+            <button mat-icon-button class="detail__header--topbtn" type="button" (click)="dialogRef.close()">
+                <mat-icon class="detail__header--icon">keyboard_arrow_left</mat-icon>
+            </button>
+        </header>
+    </div>
+    <div class="detail__avatar">
+        <header class="detail__avatarheader">
+            <div class="detail__avatarpane">
+                <img class="detail__avatarpane--pic" [src]="urlImage" alt="Avatar">
+                <div class="detail__avatarpane--nopic">
+                    <span class="detail__avatarpane--icon">Adicionar</span>
+                </div>
+            </div>
+        </header>
+        <div class="detail__avatarbody">
+            <form class="form detail__avatarbody--form" [formGroup]="formGroup" (ngSubmit)="onSubmit($event)">
+                <div class="row form-field">
+                    <mat-form-field class="col-12" [ng-required]="true">
+                        <input matInput placeholder="First Name" id="first_name" formControlName="first_name" required>
+                        <mat-error show-errors [form-control]="first_name" caption="Nome" [ng-material]="true"></mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row form-field">
+                    <mat-form-field class="col-12" [ng-required]="true">
+                        <input matInput placeholder="Last Name" id="last_name" formControlName="last_name" required>
+                        <mat-error show-errors [form-control]="last_name" caption="Last Name" [ng-material]="true"></mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row form-field">
+                    <mat-form-field class="col-12">
+                        <input matInput placeholder="E-mail" id="email" formControlName="email">
+                    </mat-form-field>
+                </div>
+                <div class="row form-field">
+                    <button color="accent" mat-raised-button
+                        [disabled]="formGroup.invalid"
+                        [ngClass]="{'disable-field':loading}">
+                        <mat-icon>check</mat-icon>&nbsp;Salvar
+                    </button>
+                    &nbsp;
+                    <button mat-raised-button type="button" (click)="dialogRef.close()"
+                        [ngClass]="{'disable-field':loading}">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
