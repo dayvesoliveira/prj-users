@@ -1,5 +1,10 @@
 # PrjUsers
 
+Projeto de test da lib NgRx.
+
+NgRx is a framework for building reactive applications in Angular (https://ngrx.io/docs).
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
 
 ## Development server
